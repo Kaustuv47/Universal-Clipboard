@@ -144,7 +144,11 @@ class _ClipboardPageState extends State<ClipboardPage> {
             color: Colors.black,
           ),
           backgroundColor: Colors.grey,
-          elevation: 30,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                topRight :Radius.circular(20), topLeft :Radius.circular(20), bottomRight :Radius.circular(20), bottomLeft :Radius.circular(20)),
+          ),
+          elevation: 50,
           autofocus: true,
           onPressed: () async {
             if (_textEditingController.text != '') {
@@ -167,6 +171,10 @@ class _ClipboardPageState extends State<ClipboardPage> {
           "Sync",
           style: TextStyle(color: Colors.black),
         ),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20), bottomLeft: Radius.circular(20)),
+        ),
         backgroundColor: Colors.grey,
         elevation: 30,
         onPressed: () {
@@ -186,6 +194,10 @@ class _ClipboardPageState extends State<ClipboardPage> {
         label: const Text(
           "From Clipboard",
           style: TextStyle(color: Colors.black),
+        ),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topRight: Radius.circular(20), bottomRight: Radius.circular(20)),
         ),
         backgroundColor: Colors.grey,
         elevation: 20,
